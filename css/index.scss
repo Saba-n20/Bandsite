@@ -124,11 +124,9 @@
   
   &__container {
     position: relative;
-    background-image: url('../assets/Images/hero-bio.jpg');
+    background-image:( linear-gradient((rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5))),url('../assets/Images/hero-bio.jpg'));
     background-size: cover;
     background-position: center;
-    background: linear-gradient(
-    rgba(32, 32, 32, 0.5));
     height: 330px;
     width: auto;
     @include tablet {
@@ -419,6 +417,9 @@
             padding: 1.5rem;
             text-align: right;
         }
+        @include desktop{
+          padding-top: 1.7rem;
+        }
     }
 
         &__logo {
@@ -426,6 +427,9 @@
             height: 1.25rem;
             width: 7.5rem;
             background-color: $bandsite-black;
+            @include tablet{
+
+            }
         }
     
 

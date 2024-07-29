@@ -28,11 +28,10 @@
 
 //Mixins For Tablet-Desktop h3 tag
 @mixin tablet-h3 {
-  @include tablet{
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
-  }
+  
 }
 
 // Mixins For Tablet-desktop P Tag
