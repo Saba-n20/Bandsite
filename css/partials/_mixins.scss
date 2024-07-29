@@ -1,0 +1,46 @@
+@use 'variables' as *;
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+//Mixins For Tablet-Desktop h1 tag
+@mixin tablet-h1{
+  font-size: 3.75rem;
+  line-height: 4.25rem;
+  font-weight: 700;
+}
+
+//Mixins For Tablet-Desktop h2 tag
+@mixin tablet-h2{
+  font-size: 3.75rem;
+  line-height: 4.25rem;
+  font-weight: 700;
+}
+
+//Mixins For Tablet-Desktop h3 tag
+@mixin tablet-h3 {
+  @include tablet{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+}
+
+// Mixins For Tablet-desktop P Tag
+@mixin tablet-p {
+    font-size: 1.1rem;
+    line-height: 1.375rem;
+    font-weight: 400; 
+}
+
+
+
