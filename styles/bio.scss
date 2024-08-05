@@ -1,0 +1,327 @@
+@use './partials/global' as *;
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+
+.hero {
+  
+  &__container {
+    position: relative;
+    background-image:( linear-gradient((rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5))),url('../assets/Images/hero-bio.jpg'));
+    background-size: cover;
+    background-position: center;
+    height: 330px;
+    width: auto;
+    @include tablet {
+      height: 46.875rem;
+      width: auto;
+    }
+  }
+
+  &__title {
+    color: $white;
+    position: absolute;
+    text-align: center;
+    top: 7.8125rem;
+    left: 1.25rem;
+    @include tablet {
+        top: 20.9375rem;
+        @include tablet-h1();
+    }
+    @include desktop{
+      padding: 0rem 4rem;
+      @include tablet-h1;
+    }
+  }
+}
+
+.about {
+
+  &__partone{
+    padding: 1.5rem 1rem 1rem 1rem;
+
+    @include tablet{
+        padding: 3rem 2.25rem 2.25rem 2.25rem;
+        @include tablet-h2;
+      }
+    @include desktop{
+      @include tablet-h2;
+    }
+  }
+
+  &__partone-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__partone-image {
+    max-width: 23rem;
+    height: auto;
+    @include tablet{
+        max-width: 45rem;
+        height:auto;
+
+    }
+  }
+
+  &__partone-txt {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width:23rem;
+    margin: auto;
+    padding: auto;
+   
+    @include tablet {
+      flex-direction: column;
+      max-width: 40rem;
+      // margin: auto;
+      // padding: auto;
+      text-align: justify;
+      @include tablet-p;
+    }
+    @include desktop{
+      @include tablet-p;
+    }
+  }
+  
+  &__parttwo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 23rem;
+    align-items: flex-start;
+    padding: auto;
+    margin: auto;
+    @include tablet {
+        max-width: 50rem;
+        margin: auto;
+        padding: auto;
+       
+        
+      }
+    @include desktop{
+      max-width: 50rem;
+      margin: auto;
+      padding: auto;
+    }
+    
+  }
+
+  &__parttwo-title{
+    @include tablet{
+        padding-top: 1.2rem;
+        text-align: center;
+        @include tablet-h3;
+    }
+    @include desktop{
+      @include tablet-h3;
+    }
+  }
+    &__parttwo-container{
+        margin: auto;
+        padding: auto;
+        @include tablet{
+            max-width: 54rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: auto;
+            padding: auto;
+        } 
+    }
+
+
+
+  &__parttwo-txt {
+    padding: 1rem 0rem;
+    @include tablet {
+      @include tablet-p;
+    }
+    @include desktop{
+      @include tablet-p;
+      padding-left: 1rem;
+    }
+  }
+}
+
+.photos {
+  background-color: $alabaster;
+  padding: 1.5rem 1rem 1rem 1rem;
+  @include tablet{
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
+  
+
+  &__title {
+    @include tablet{
+        @include tablet-h3;
+    }
+    @include desktop{
+      @include tablet-h3;
+    }
+  }
+
+  &__container {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 2.25rem;
+    }
+  }
+  &__img {
+    height: auto;
+    width: 100%;
+    padding-bottom: 1rem;
+    @include tablet {
+      height: auto;
+      width: 32%;
+      padding-bottom: 1rem;
+    }
+    @include desktop {
+      height: auto;
+      width: 32%;
+      padding-bottom: 1.5rem;
+    }
+  }
+}
+
+.comment{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0rem 2.25rem 2.25rem 0rem;
+  @include tablet{
+    justify-content: center;
+  }
+
+  &__title{
+    padding-left: 1rem;
+  }
+
+  &__part{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__form{
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  width: auto;
+  }
+
+  &__txt{
+    height: 2.25rem;
+    width: 17.5rem;
+    border: 0.0625rem solid $mercury;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    @include tablet{
+      width: 600px;
+    }
+  }
+
+  &__label-txt{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: $mercury;
+  }
+
+  &__label-txtarea{
+    display: flex;
+    flex-direction: column;
+    padding-left: 3.125rem;
+    margin-bottom: 1rem;
+    color: $mercury;
+  }
+
+  &__txtarea{
+    height: 6.25rem;
+    width: 17.5rem;
+    border: 0.0625rem solid $mercury;
+    padding:0.75rem;
+    ::placeholder{
+      color: $bandsite-black
+    }
+    @include tablet{
+      width: 600px;
+    }
+  }
+
+  &__form-avatar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__image{
+    height: 2.25rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    ::placeholder{
+      background-color: $mercury;
+    }
+  }
+
+  &__btn-place{
+    @include tablet{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+
+  &__btn{
+    height:40px;
+    width: 280px;
+    margin-left: 50px;
+    background-color: $bandsite-black;
+    color: $white;
+    text-align: center;
+    @include tablet{
+      width: 150px;
+    }
+    }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  &__avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Make the avatar circular */
+    margin-right: 10px;
+    background-color: $mercury; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+  }
+
+  &__content{
+    padding-top: 1rem;
+  }
+  &__name-date{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__date{
+    color: $mercury;
+  }
+
+
+}
+

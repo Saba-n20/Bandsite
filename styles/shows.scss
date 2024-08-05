@@ -1,0 +1,63 @@
+@use './partials/global' as *;
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+
+.hero {
+  
+    &__container {
+      position: relative;
+      background-image:( linear-gradient((rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5))),url('../assets/Images/Photo-gallery-3.jpg'));
+      background-size: cover;
+      background-position: center;
+      height: 20.625rem;
+      width: auto;
+      @include tablet {
+        height: 46.875rem;
+        width: auto;
+      }
+    }
+  
+    &__titleone {
+      color: $white;
+      position: absolute;
+      text-align: center;
+      top: 36px;
+      left: 1.25rem;
+      @include tablet {
+          top: 20.9375rem;
+          @include tablet-h1();
+      }
+      @include desktop{
+        padding: 0rem 4rem;
+        @include tablet-h1;
+      }
+    }
+
+    &__titletwo {
+      color: $white;
+      position: absolute;
+      text-align: center;
+      top: 86px;
+      left: 1.25rem;
+    }
+
+    &__titlethree {
+      color: $white;
+      position: absolute;
+      text-align: center;
+      top: 126px;
+      left: 1.25rem;
+    }
+
+    &__music{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      height: auto;
+      width:90%;
+      top: 150px;
+      left: 36px;
+    }
+  }

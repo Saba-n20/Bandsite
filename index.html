@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/partials/global.css" />
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./styles/partials/global.css" />
+    <link rel="stylesheet" href="./styles/bio.css" />
+    <script src="./scripts/index-page.js" defer></script>
     <title>BandSite</title>
   </head>
 
@@ -12,15 +13,17 @@
     <header>
       <section class="header">
         <div class="header__container">
+          <a href="./index.html">
           <img class="header__logo" src="./Assets/Logo/Logo-bandsite.svg" />
+          </a>
         </div>
         <div class="header__subnav">
           <ul class="header__list">
             <li class="header__list-item">
-              <a class="header__list-item-link" href="#">Biography</a>
+              <a class="header__list-item-link" href="./index.html">Biography</a>
             </li>
             <li class="header__list-item">
-              <a class="header__list-item-link" id="link" href="#"> shows</a>
+              <a class="header__list-item-link" id="link" href="./pages/shows.html"> Shows</a>
             </li>
           </ul>
         </div>
@@ -125,12 +128,38 @@
           />
         </div>
       </section>
+
+      <h2 class="comment__title">Join the onversation</h2>
+      <section class="comment">
+        <article class="comment__part">
+            
+          <form class="comment__form" id="comment-form">
+            <div class="comment__form-avatar">
+              <img class="comment__image" 
+              src="./assets/Images/Mohan-muruge.jpg" 
+              alt="Mohan-muruge"/>
+            <!-- </div> -->
+            <label class="comment__label-txt" for="text">NAME
+              <input type="text" class="comment__txt" id="name" placeholder="Enter your name"  required/>
+            </label></div>
+            <label class="comment__label-txtarea"for="textarea">COMMENT
+              <textarea  class="comment__txtarea" id="comment" placeholder="Add a new comment" required></textarea>
+            </label>
+            <!-- <input type="url" id="avatar" class="form-input" placeholder="Avatar URL (optional)" />  -->
+            <div class="comment__btn-place">
+              <button type="submit"class="comment__btn" id="submit">COMMENT</button>
+            </div>
+          </form>
+
+          <div class="comment__list" id="comments-list"></div>
+        </article>
+      </section>
     </main>
 
     <footer class="footer">
       <section class="footer__section">
         <div class="footer__content">
-          <h3 class="footer__title">Get in Touch</h3>
+          <h2 class="footer__title">Get in Touch</h2>
 
           <!-- Footer-Scial -->
           <div class="footer__icons">
@@ -160,7 +189,7 @@
           <!--Footer-Contact-->
           <div class="footer__contacts">
             <div>
-              <p class="footer__contact-title">The Bees Knees Management</p>
+              <h3 class="footer__contact-title">The Bees Knees Management</h3>
               <p class="footer__contact-info">
                 503 Broadway Penthouse, <br />
                 New York, NY 10012, USA
@@ -171,7 +200,7 @@
             </div>
 
             <div>
-              <p class="footer__contact-title">Limitless Artist Group</p>
+              <h3 class="footer__contact-title">Limitless Artist Group</h3>
               <p class="footer__contact-info">
                 Booking Agent for <br />
                 US / South America / Japan
@@ -182,7 +211,7 @@
             </div>
 
             <div>
-              <p class="footer__contact-title">ARCH Entertainment</p>
+              <h3 class="footer__contact-title">ARCH Entertainment</h3>
               <p class="footer__contact-info">
                 Booking Agent for <br />
                 UK / EU / AU
