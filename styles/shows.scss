@@ -22,32 +22,55 @@
       color: $white;
       position: absolute;
       text-align: center;
-      top: 36px;
+      top: 3.125rem;
       left: 1.25rem;
       @include tablet {
           top: 20.9375rem;
-          @include tablet-h1();
+          @include tablet-h3;
+          top: 9.375rem;
+          left:2.25rem;
       }
       @include desktop{
-        padding: 0rem 4rem;
-        @include tablet-h1;
+        @include tablet-h3;
+        top: 15rem;
+        left: 5.5rem;
       }
     }
 
-    &__titletwo {
+    &__titletwo{
       color: $white;
       position: absolute;
       text-align: center;
-      top: 86px;
+      top: 5.375rem;
       left: 1.25rem;
+      @include tablet{
+        @include tablet-h1;
+        top: 15.625rem;
+        left: 2.25rem;
+      }
+      @include desktop{
+        @include tablet-h1;
+        top: 18rem;
+        left: 5.5rem;
+      }
     }
 
     &__titlethree {
       color: $white;
       position: absolute;
       text-align: center;
-      top: 126px;
+      top: 7.875rem;
       left: 1.25rem;
+      @include tablet{
+        @include tablet-h1;
+        top: 21.875rem;
+        left: 2.25rem;
+      }
+      @include desktop{
+        @include tablet-h1;
+        top: 23rem;
+        left: 5.5rem;
+      }
     }
 
     &__music{
@@ -55,9 +78,101 @@
       flex-direction: column;
       align-items: center;
       position: absolute;
-      height: auto;
+      height: 50%;
       width:90%;
-      top: 150px;
-      left: 36px;
+      bottom: -1.875rem;
+      left: 1.5rem;
+      @include tablet{
+        width: 50%;
+        height:auto;
+        left: 2.25rem;
+        bottom: 3.125rem;
+      }
+      @include desktop{
+        width: 40%;
+        height:auto;
+        left: 40rem;
+        bottom: 16.875rem;
+      }
     }
   }
+
+.shows{
+
+  &__container{
+    @include tablet{
+       width: 60rem;
+       padding: auto;
+       margin: auto;
+    }
+  }
+
+  &__title{
+    padding-left: 1rem;
+    @include tablet{
+      @include tablet-h2;
+      padding-left: 3.5rem;
+    }
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 0rem;
+    border-bottom: 0.125rem solid $mercury;
+    &:hover{
+      background-color: $alabaster;
+    }
+    &.selected{
+      background-color: $mercury;
+    }
+    @include tablet{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  &__info{
+    display:flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    @include tablet{
+      width:50%;
+      @include tablet-p;
+    }
+  }
+
+  &__label{
+    color: $silver;
+    font-style: bold;
+    padding-top: 0.625rem;
+    display: block;
+    @include tablet{
+      .shows__item:not(.first-show) .shows__label {
+        display: none;
+    }
+    }
+  }
+
+  &__button{
+    height:40px;
+    width: 90%;
+    padding: 0rem 1rem;
+    border-radius: 0.25rem;
+    margin-left: 1.3rem;
+    margin-top: 1rem;
+    background-color: $bandsite-black;
+    color: $white;
+    text-align: center;
+    &:hover{
+      background-color: $bandsite-darkblack;
+    }
+  @include tablet{
+    width: 11rem;
+    height: 40px;
+    margin: 1rem;
+    }
+  }
+
+}

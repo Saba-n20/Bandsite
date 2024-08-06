@@ -1,9 +1,8 @@
 
         // Sample default comments
         const defaultComments = [
-            { name: 'Gurleen', text: 'This is a great post!', date: new Date().toLocaleString(),},
-            { name: 'Pearl', text: 'I found this information very useful.', date: new Date().toLocaleString(),},
-            { name: 'Suzan', text: 'Thanks for sharing this!', date: new Date().toLocaleString()}
+            { name: 'Victor', text: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains', 
+              date: new Date().toLocaleString(),}
         ];
 
         // Function to render comments
@@ -12,10 +11,10 @@
             commentsList.innerHTML = ""; // Clear the existing comments
             comments.forEach(comment => {
                 const commentDiv = document.createElement('div');
-                commentDiv.classList.add('comment');
+                commentDiv.classList.add('comment__box');
                 commentDiv.innerHTML = `
                     <div class="comment__avatar">
-                        <span>${comment.name[0]}</span> <!-- Display the first letter of the name  :) -->
+                        ${comment.name[0]} <!-- Display the first letter of the name  :) -->
                     </div>
                     <div class="comment__content">
                     <div class="comment__name-date">
@@ -37,7 +36,7 @@
             const commentInput = document.getElementById('comment');
 
             if (nameInput.value && commentInput.value) {
-                const currentDate = new Date().toLocaleString(); // Get current date and time
+                const currentDate = new Date().toLocaleString(); // Get current date and time ;)
                 const newComment = {
                     name: nameInput.value,
                     date: currentDate,

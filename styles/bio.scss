@@ -22,10 +22,10 @@
     color: $white;
     position: absolute;
     text-align: center;
-    top: 7.8125rem;
+    top: 6rem;
     left: 1.25rem;
     @include tablet {
-        top: 20.9375rem;
+        top: 15rem;
         @include tablet-h1();
     }
     @include desktop{
@@ -59,7 +59,7 @@
     max-width: 23rem;
     height: auto;
     @include tablet{
-        max-width: 45rem;
+        max-width: 50rem;
         height:auto;
 
     }
@@ -70,14 +70,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     max-width:23rem;
+    padding-top: 1.5rem;
     margin: auto;
     padding: auto;
    
     @include tablet {
       flex-direction: column;
-      max-width: 40rem;
-      // margin: auto;
-      // padding: auto;
+      max-width: 50rem;
+      margin: auto;
+      padding: auto;
       text-align: justify;
       @include tablet-p;
     }
@@ -197,6 +198,9 @@
   @include tablet{
     justify-content: center;
   }
+  @include desktop{
+    justify-content: center;
+  }
 
   &__title{
     padding-left: 1rem;
@@ -205,6 +209,12 @@
   &__part{
     display: flex;
     flex-direction: column;
+
+    @include desktop{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   
   &__form{
@@ -212,6 +222,10 @@
   flex-direction: column;
   margin-left: 1rem;
   width: auto;
+  @include tablet{
+    margin: auto;
+    padding: auto;
+  }
   }
 
   &__txt{
@@ -221,7 +235,7 @@
     border-radius: 0.25rem;
     padding: 0.75rem;
     @include tablet{
-      width: 600px;
+      width: 37.5rem;
     }
   }
 
@@ -247,11 +261,11 @@
     width: 17.5rem;
     border: 0.0625rem solid $mercury;
     padding:0.75rem;
-    ::placeholder{
-      color: $bandsite-black
+    & ::placeholder{
+      color: $bandsite-black;
     }
     @include tablet{
-      width: 600px;
+      width: 37.5rem;
     }
   }
 
@@ -266,9 +280,6 @@
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 50%;
-    ::placeholder{
-      background-color: $mercury;
-    }
   }
 
   &__btn-place{
@@ -280,33 +291,60 @@
   }
 
   &__btn{
-    height:40px;
-    width: 280px;
-    margin-left: 50px;
+    height:2.5rem;
+    width: 17.5rem;
+    margin-left: 3.125rem;
     background-color: $bandsite-black;
     color: $white;
+    border-radius: 0.25rem;
     text-align: center;
+    &:hover{
+      background-color: $bandsite-darkblack;
+    }
     @include tablet{
-      width: 150px;
+      width: 9.375rem;
     }
     }
   &__list{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 16px;
+    padding: 1rem;
+  }
+
+  &__box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 0.0625rem solid $mercury;
+      padding-bottom: 1rem;
+    @include tablet{
+      margin: auto;
+      padding: auto;
+      max-width: 42rem;
+      border-bottom: 0.0625rem solid $mercury;
+      padding-bottom: 1rem;
+    }
+    @include desktop{
+      margin: auto;
+      padding: auto;
+      max-width: 42rem;
+      border-bottom: 0.0625rem solid $mercury;
+      padding-bottom: 1rem;
+    }
   }
 
   &__avatar{
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 60px;
     border-radius: 50%; /* Make the avatar circular */
-    margin-right: 10px;
+    margin-right: 0.625rem;
     background-color: $mercury; 
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden; 
+    
   }
 
   &__content{
