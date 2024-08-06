@@ -41,5 +41,12 @@
     font-weight: 400; 
 }
 
+// Mixins For Tablet-desktop label and button Tag
+@mixin tablet-btn-lab{
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
 
 

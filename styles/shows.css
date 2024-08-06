@@ -45,6 +45,13 @@ a {
   text-decoration: none;
 }
 
+label,
+button {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
 p {
   font-size: 0.8125rem;
   line-height: 1.125rem;
@@ -195,7 +202,7 @@ ul li {
 }
 @media screen and (min-width: 80rem) {
   .footer {
-    padding: 2.875rem 5rem;
+    padding: 2.875rem 4rem;
   }
 }
 @media (min-width: 48rem) {
@@ -266,7 +273,7 @@ ul li {
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 12rem;
+    gap: 5rem;
   }
 }
 .footer__contact-title {
@@ -274,16 +281,18 @@ ul li {
 }
 @media (min-width: 48rem) {
   .footer__contact-title {
-    font-size: 1.1rem;
-    line-height: 1.375rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    width: 300px;
   }
 }
 @media screen and (min-width: 80rem) {
   .footer__contact-title {
-    font-size: 1.1rem;
-    line-height: 1.375rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-size: 1.3rem;
   }
 }
 .footer__contact-info {
@@ -355,7 +364,7 @@ ul li {
 }
 @media screen and (min-width: 80rem) {
   .footer__detail {
-    padding: 2rem 0rem;
+    padding: 3.5rem 0rem;
     font-size: 1.1rem;
     line-height: 1.375rem;
     font-weight: 400;
@@ -364,7 +373,7 @@ ul li {
 
 .hero__container {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../assets/Images/Photo-gallery-3.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(31, 31, 31, 0.5)), url("../assets/Images/Photo-gallery-3.jpg");
   background-size: cover;
   background-position: center;
   height: 20.625rem;
@@ -481,9 +490,19 @@ ul li {
 
 @media (min-width: 48rem) {
   .shows__container {
+    display: flex;
+    flex-direction: column;
     width: 60rem;
     padding: auto;
     margin: auto;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .shows__container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: 200px;
   }
 }
 .shows__title {
@@ -517,6 +536,11 @@ ul li {
     justify-content: space-around;
   }
 }
+@media screen and (min-width: 80rem) {
+  .shows__item {
+    margin: 0rem 2.25rem 0rem 13.75rem;
+  }
+}
 .shows__info {
   display: flex;
   flex-direction: column;
@@ -537,8 +561,10 @@ ul li {
   display: block;
 }
 @media (min-width: 48rem) {
-  .shows__label .shows__item:not(.first-show) .shows__label {
-    display: none;
+  .shows__label {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
   }
 }
 .shows__button {

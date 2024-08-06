@@ -204,6 +204,14 @@
 
   &__title{
     padding-left: 1rem;
+    @include tablet{
+
+    }
+    @include desktop{
+      @include tablet-h3;
+      padding-left: 3.5rem;
+      padding-top: 1rem;
+    }
   }
 
   &__part{
@@ -234,6 +242,9 @@
     border: 0.0625rem solid $mercury;
     border-radius: 0.25rem;
     padding: 0.75rem;
+    &::placeholder{
+      color: $bandsite-black;
+    }
     @include tablet{
       width: 37.5rem;
     }
@@ -246,6 +257,12 @@
     padding: 1rem;
     margin-bottom: 1rem;
     color: $mercury;
+    @include tablet{
+      @include tablet-btn-lab;
+    }
+    @include desktop{
+      @include tablet-btn-lab;
+    }
   }
 
   &__label-txtarea{
@@ -254,6 +271,12 @@
     padding-left: 3.125rem;
     margin-bottom: 1rem;
     color: $mercury;
+    @include tablet{
+      @include tablet-btn-lab;
+    }
+    @include desktop{
+      @include tablet-btn-lab;
+    }
   }
 
   &__txtarea{
@@ -303,6 +326,10 @@
     }
     @include tablet{
       width: 9.375rem;
+      @include tablet-btn-lab;
+    }
+    @include desktop{
+      @include tablet-btn-lab;
     }
     }
   &__list{
@@ -317,7 +344,7 @@
     flex-direction: row;
     align-items: center;
     border-bottom: 0.0625rem solid $mercury;
-      padding-bottom: 1rem;
+    padding-bottom: 1rem;
     @include tablet{
       margin: auto;
       padding: auto;
@@ -328,7 +355,7 @@
     @include desktop{
       margin: auto;
       padding: auto;
-      max-width: 42rem;
+      width: 42rem;
       border-bottom: 0.0625rem solid $mercury;
       padding-bottom: 1rem;
     }

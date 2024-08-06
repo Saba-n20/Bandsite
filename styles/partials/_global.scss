@@ -36,6 +36,14 @@ a {
   text-decoration: none;
 }
 
+label,
+button{
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+
+}
+
 p {
   // padding-top: 1rem;
   font-size: 0.8125rem;
@@ -176,7 +184,7 @@ ul li{
       
   }
   @include desktop{
-    padding: 2.875rem 5rem;
+    padding: 2.875rem 4rem;
   }
 
   &__section {
@@ -245,17 +253,19 @@ ul li{
         width: 100%;
         display: flex;
         flex-direction: row;
-        gap: 12rem;
+        gap: 5rem;
       }
   }
 
   &__contact-title {
     margin-top: 1rem;
       @include tablet {
-          @include tablet-p;
+          @include tablet-h3;
+          width:300px;
       }
       @include desktop{
-        @include tablet-p;
+        @include tablet-h3;
+        font-size: 1.3rem;
       }
   }
 
@@ -313,7 +323,7 @@ ul li{
             order: 5;
           }
           @include desktop{
-            padding: 2rem 0rem;
+            padding: 3.5rem 0rem;
             @include tablet-p;
           }
       }
