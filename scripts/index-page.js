@@ -11,24 +11,51 @@ function renderComments(comments) {
     console.error('Comments list element not found');
     return;
   }
-  commentsList.innerHTML = ""; // Clear the existing comments
+  
+  // Clear the existing comments
+  commentsList.innerHTML = ""; 
+  
   comments.forEach(comment => {
+    // Create the comment box container
     const commentDiv = document.createElement('div');
     commentDiv.classList.add('comment__box');
-    // Convert timestamp to a readable date format
+    
+    // Create the avatar element
+    const avatarDiv = document.createElement('div');
+    avatarDiv.classList.add('comment__avatar');
+    avatarDiv.textContent = comment.name[0]; // Display the first letter of the name
+
+    // Create the content container
+    const contentDiv = document.createElement('div');
+    contentDiv.classList.add('comment__content');
+
+    // Create the name and date container
+    const nameDateDiv = document.createElement('div');
+    nameDateDiv.classList.add('comment__name-date');
+
+    const nameDiv = document.createElement('div');
+    nameDiv.classList.add('comment__name');
+    nameDiv.textContent = comment.name;
+
+    const dateDiv = document.createElement('div');
+    dateDiv.classList.add('comment__date');
     const date = new Date(comment.timestamp).toLocaleString();
-    commentDiv.innerHTML = `
-      <div class="comment__avatar">
-        ${comment.name[0]} <!-- Display the first letter of the name  :) -->
-      </div>
-      <div class="comment__content">
-        <div class="comment__name-date">
-          <div class="comment__name">${comment.name}</div>
-          <div class="comment__date">${date}</div>
-        </div>
-        <div class="comment__text">${comment.comment}</div>
-      </div>
-    `;
+    dateDiv.textContent = date;
+
+    nameDateDiv.appendChild(nameDiv);
+    nameDateDiv.appendChild(dateDiv);
+
+    // Create the comment text element
+    const textDiv = document.createElement('div');
+    textDiv.classList.add('comment__text');
+    textDiv.textContent = comment.comment;
+
+    // Append all elements
+    contentDiv.appendChild(nameDateDiv);
+    contentDiv.appendChild(textDiv);
+    commentDiv.appendChild(avatarDiv);
+    commentDiv.appendChild(contentDiv);
+
     commentsList.appendChild(commentDiv);
   });
 }
@@ -66,7 +93,6 @@ async function handleFormSubmit(event) {
       alert('Please enter both name and comment.');
     }
   }
-  
 
 // Initialize comments and setup form submission listener
 async function initializeComments() {
