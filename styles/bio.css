@@ -794,7 +794,6 @@ ul li {
 @media screen and (min-width: 80rem) {
   .comment__box {
     margin: auto;
-    padding: auto;
     width: 42rem;
     border-bottom: 0.0625rem solid #E1E1E1;
     padding-bottom: 1rem;
@@ -821,4 +820,9 @@ ul li {
 }
 .comment__date {
   color: #E1E1E1;
+}
+.comment__text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=bio.css.map */

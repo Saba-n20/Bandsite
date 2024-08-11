@@ -354,7 +354,7 @@
     }
     @include desktop{
       margin: auto;
-      padding: auto;
+      // padding: auto;
       width: 42rem;
       border-bottom: 0.0625rem solid $mercury;
       padding-bottom: 1rem;
@@ -385,6 +385,11 @@
 
   &__date{
     color: $mercury;
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
 
