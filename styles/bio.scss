@@ -217,6 +217,7 @@
   &__part{
     display: flex;
     flex-direction: column;
+    resize: none;
 
     @include desktop{
       display: flex;
@@ -247,6 +248,7 @@
     }
     @include tablet{
       width: 37.5rem;
+      @include tablet-p;
     }
   }
 
@@ -284,11 +286,17 @@
     width: 17.5rem;
     border: 0.0625rem solid $mercury;
     padding:0.75rem;
-    & ::placeholder{
+    resize: none;
+    &::placeholder{
       color: $bandsite-black;
     }
     @include tablet{
       width: 37.5rem;
+      @include tablet-p;
+  
+    }
+    @include desktop{
+      @include tablet-p;
     }
   }
 
@@ -346,8 +354,8 @@
     border-bottom: 0.0625rem solid $mercury;
     padding-bottom: 1rem;
     @include tablet{
-      margin: auto;
-      padding: auto;
+      // margin: auto;
+      // padding: auto;
       max-width: 42rem;
       border-bottom: 0.0625rem solid $mercury;
       padding-bottom: 1rem;

@@ -1,3 +1,4 @@
+
 export default class BandSiteApi {
   constructor(apiKey) {
     this.apiKey = apiKey;
@@ -24,7 +25,6 @@ export default class BandSiteApi {
       return response.data;
     } catch (error) {
       console.error('Error in postComment:', error);
-      throw new Error(`Failed to post comment: ${error.response?.statusText || error.message}`);
     }
   }
 
@@ -33,12 +33,13 @@ export default class BandSiteApi {
       const response = await axios.get(this.buildUrl('comments'));
       let comments = response.data;
       console.log('Fetched Comments:', comments); // Debugging line
-      // Sort comments from newest to oldest
-      comments.sort((a, b) => new Date(b.date) - new Date(a.date));
+  
+      //comments are sorted from newest to oldest based on timestamp
+      comments.sort((a, b) => b.timestamp - a.timestamp);
+  
       return comments;
     } catch (error) {
       console.error('Error in getComments:', error);
-      throw new Error(`Failed to fetch comments: ${error.response?.statusText || error.message}`);
     }
   }
 
@@ -48,7 +49,6 @@ export default class BandSiteApi {
       return response.data;
     } catch (error) {
       console.error('Error in getShows:', error);
-      throw new Error(`Failed to fetch shows: ${error.response?.statusText || error.message}`);
     }
   }
 }

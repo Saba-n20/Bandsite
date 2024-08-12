@@ -1,7 +1,7 @@
 import BandSiteApi from './band-site-api.js';
 
-// Only declare bandSiteApi once
-const API_KEY = 'your_api_key_here'; // Replace with your actual API key
+
+const API_KEY = 'your_api_key_here'; 
 const bandSiteApi = new BandSiteApi(API_KEY);
 
 // Function to render comments
@@ -23,7 +23,7 @@ function renderComments(comments) {
     // Create the avatar element
     const avatarDiv = document.createElement('div');
     avatarDiv.classList.add('comment__avatar');
-    avatarDiv.textContent = comment.name[0]; // Display the first letter of the name
+    avatarDiv.textContent = comment.name[0]; // Display the first letter of the name ;)
 
     // Create the content container
     const contentDiv = document.createElement('div');
@@ -70,10 +70,9 @@ async function handleFormSubmit(event) {
       const newComment = {
         name: nameInput.value,
         comment: commentInput.value
-        // Removed timestamp as it's not needed by the API
       };
   
-      console.log('Submitting new comment:', newComment); // Debugging line
+      console.log('Submitting new comment:', newComment); // For debugging
   
       try {
         // Post the new comment to the API
@@ -94,7 +93,7 @@ async function handleFormSubmit(event) {
     }
   }
 
-// Initialize comments and setup form submission listener
+// Initialize comments
 async function initializeComments() {
   try {
     const comments = await bandSiteApi.getComments();
@@ -104,7 +103,7 @@ async function initializeComments() {
   }
 }
 
-// Ensure the DOM is fully loaded before initializing
+// be suring the DOM is fully loaded before initializing
 document.addEventListener('DOMContentLoaded', () => {
   initializeComments();
   const form = document.getElementById('comment-form');
